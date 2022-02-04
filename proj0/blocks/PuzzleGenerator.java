@@ -22,6 +22,9 @@ class PuzzleGenerator implements PuzzleSource {
         assert handSize > 0;
         model.clearHand();
         // FIXME
+        for (int i = 0; i < handSize; i++) {
+            model.deal(PIECES[_random.nextInt(PIECES.length)]);
+        }
         return true;
     }
 
