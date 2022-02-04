@@ -63,7 +63,7 @@ class Utils {
     }
 
     /** PLACES must have the form of a sequence of one or more substrings
-     *  of "*"s and "."  separated by whitespace, where all substrings arnbe
+     *  of "*"s and "."  separated by whitespace, where all substrings are
      *  of the same length.  Returns a rectangular array, P, in which P[r][c]
      *  is true iff the c'th character of the r'th row (0 indexed) is '*'. */
     static boolean[][] positions(String places) {

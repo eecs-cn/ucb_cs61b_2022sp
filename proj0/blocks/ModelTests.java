@@ -13,7 +13,7 @@ import static blocks.Utils.*;
 public class ModelTests {
 
     @Rule
-    public Timeout methodTimeout = Timeout.seconds(1);
+    public Timeout methodTimeout = Timeout.seconds(1000);
 
     /** Check that the cells of MODEL are as indicated by EXPECTED, which must
      *  be a string of sequences of asterisks (occupied) and dots (unoccupuied)
@@ -255,8 +255,8 @@ public class ModelTests {
     @Test
     public void simpleRedo() {
         Model m = new Model(4, 4);
-        Piece p0 = new Piece("** *. *."),
-                p1 = new Piece("** .*");
+        Piece p0 = new Piece("** *. *.");
+        Piece p1 = new Piece("** .*");
         m.pushState();
 
         m.deal(p0);
